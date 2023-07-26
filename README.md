@@ -44,3 +44,12 @@ In this project, we have four layers-
     private LocalDate tokenCreationDate;
      @OneToOne
     private User user ;
+>## Application property
+*spring.datasource.url=jdbc:mysql://13.134.55.255:3306/expenseDb
+spring.datasource.username=srushti
+spring.datasource.password=12345
+spring.datasource.driverClassName=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.show_sql=true
+spring.jpa.properties.hibernate.use_sql_comments=true
+spring.jpa.properties.hibernate.format_sql=true
