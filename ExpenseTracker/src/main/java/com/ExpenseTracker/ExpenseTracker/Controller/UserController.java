@@ -66,12 +66,6 @@ public class UserController {
         }
         return "Authentication Failed";
     }
-    @GetMapping("expense/month/year")
-    public String getExpenses(@RequestParam String Month,@RequestParam int year,@RequestParam String email,@RequestParam String token){
-        if(authenticationService.authenticate(email,token)){
-            return expenseService.getAmount(email,Month,year);
-        }
-        return "Authentication Failed";
-    }
+    
 
 }
