@@ -20,9 +20,6 @@ public class ExpenseService {
     @Autowired
     IUserRepo userRepo;
 
-    @Autowired
-    IProductRepo productRepo;
-
     public void saveExpense(Expense expense){
         expenseRepo.save(expense);
     }
