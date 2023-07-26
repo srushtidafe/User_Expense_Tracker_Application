@@ -61,18 +61,5 @@ public class ExpenseService {
         return "Unknown Error Occurred";
     }
 
-    public String getAmount(String email, String month, int year) {
-        User user = userRepo.findFirstByUserEmail(email);
-        List<Expense> expenseList = expenseRepo.findByUser(user);
-        double total = 0;
-        for(Expense expense : expenseList){
-          if(expense.getDate().getMonth().getDisplayName(TextStyle.FULL, Locale.getDefault()).equals(month) && expense.getDate().getYear()==year){
-              List<Product>productList = expense.getProductList();
-              for(Product product : productList){
-                  total = total + product.getProductPrice();
-              }
-          }
-        }
-        return user.getUserFirstName()+" has expanse in "+" the month of "+month+" is -->"+total;
-    }
+    
 }
